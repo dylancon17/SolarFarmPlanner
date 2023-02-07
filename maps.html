@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Solar Farm Location Planner
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+
+    <section>
+        <div class="header"> 
+        <!-- Should be standard across all pages -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3">
+                        <h1>Solar Farm Location Planner</h1>
+                    </div>
+                    <div class="col-xl-3"></div>
+
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/">The Problem</a>
+                    </div>
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/data-sources.html">Data</a>
+                    </div>
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/maps.html">Our Analysis</a>
+                    </div>
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/results.html">Our Results</a>
+                    </div>                    
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/progress.html">Our Progress</a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-top: 4px solid rgba(0,0,0,0.3);margin-bottom: 0rem;">
+        </div>
+    </section>
+
+    <section>
+        <div class="main">
+            <div class="container-fluid textbar">
+                <div class ='row'>
+                    <div class="col-xl-4 textbar align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <p></p>
+                            <p></p>
+                            <h3>Processing Our Data</h3>
+                            <p>The first step in ArcGIS was to process our data to then be combined</p>
+                            <p>Visualizations of our data sets are shown here. Each one was processed to have a field with a number between 0 and 1 where 0 is not a viable location for solar panels while 1 is the best</p>
+                        </div>
+                    </div>
+                    <!-- Energy Infrastructure -->
+                    <div class="col-xl-4 sidebar align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <h4>Energy Infrastructure Capability</h4>
+                            <img src="/engo351/2022F/t1/static/power.png" alt="Energy Infrastructure" class="data-images">
+                            <p>The dark blue transparent areas represent areas close to major power lines. For the opaque areas, darker blue indicates a higher capability to transmit more power.</p>
+                        </div>
+                    </div>
+                    <!-- Elevation -->
+                    <div class="col-xl-4 textbar align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <h4>Alberta Elevation Aspect</h4>
+                            <img src="/engo351/2022F/t1/static/aspect.png" alt="Aspect" class="data-images">
+                            <p>The south facing slopes parts of Alberta have been identified as yellow, the flat parts as purple and the SW/SE parts as red, all others slopes are green.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class ='row'>
+                    <!-- Wildlife -->
+                    <div class="col-xl-4 sidebar align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <h4>Alberta Wildlife Risk</h4>
+                            <img src="/engo351/2022F/t1/static/Wildlife.png" alt="Wildlife" class="data-images">
+                            <p>Areas that would have minimal risk to wildlife habitat are dark blue that is then on a scale to yellow that shows areas with critical to wildlife habitat or are unusable such as national parks, military bases are yellow.</p>
+                        </div>
+                    </div>
+                    <!-- Radiation -->
+                    <div class="col-xl-4 textbar align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <h4>Alberta Annular Solar Radiation</h4>
+                            <img src="/engo351/2022F/t1/static/solar radiation.png" alt="Solar Radiation" class="data-images">
+                            <p>The average annual solar radiation is shown for Alberta where white indicates high levels of solar radiation while black indicates low levels.</p>
+                        </div>
+                    </div>
+                    <!-- Forests -->
+                    <div class="col-xl-4 sidebar align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <h4>Alberta Ecological Zones</h4>
+                            <img src="/engo351/2022F/t1/static/forest.png" alt="Land Coverage" class="data-images">
+                            <p>Completely usable areas for solar panels are indicated by orange, partially usable areas are green and areas unable to be used such as forest or water is purple.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class ='row textbar align-items-center ' style="text-align: center">
+                    <div class="col-xl-12 align-items-center">
+                        <h3>Combining Data</h3>
+                        <p><br>Using our raster values for each dataset they were multiplied together to find ideal locations to install a solar panel in Alberta and then processed to show the ideal data.</p>
+                        <p>The maps are displayed on a spectrum where sliding from light yellow for poor spots to dark blue for ideal locations.</p>
+                    </div>
+                </div>
+                <div class ='row textbar align-items-center'>
+                    <div class="col-xl-6 align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <img src="/engo351/2022F/t1/static/final_powerlines.png" alt="Result1" class="results-images">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 align-items-center">
+                        <div class="borders noline" style="text-align: center">
+                            <img src="/engo351/2022F/t1/static/final_powerlines_8400.png" alt="Result2" class="results-images">
+                        </div>
+                    </div>
+                </div> 
+                <div class ='row sidebar align-items-center'>
+                    <div class="col-xl-1 align-items-center"></div>
+                    <div class="col-xl-10 align-items-center">
+                        <div class="borders noline">
+                            <h3>Identifying Key Areas</h3>
+                            <p>To finish our analysis we filtered out non ideal areas to create an actionable map of areas to identfy the best areas for potential installation of a solar panel farm.</p>
+                            <style>.embed-container {position: relative; padding-bottom: 64%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="940" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="powerlines_ideal_8400_point" src="//ucalgary.maps.arcgis.com/apps/Embed/index.html?webmap=b3a6ca7dc87c4a498cf3e56dcb2c2c96&extent=-119.5875,48.2892,-103.3607,53.9291&home=true&zoom=true&previewImage=false&scale=true&disable_scroll=false&theme=light"></iframe></div>                        
+                        </div>
+                    </div>
+                    <div class="col-xl-1 align-items-center"></div>
+                </div>
+                <div class ='row textbar align-items-center ' style="text-align: center">
+                    <div class="col-xl-12 align-items-center">
+                        <h3>Recording Our Steps</h3>
+                        <p>A key part in GIS projects is to ensure that the steps can be replicated. Some of the data we use is dynamic such as energy capability and annual solar radiation so this project needed to be designed to be rerun in the future.</p>
+                        <p>To do this, model builder was used, our two models are shown below. The intention of the first model is to convert our input data to rasters while our second model combines our data.</p>
+                    </div>
+                </div>
+                <div class ='row textbar align-items-center ' style="text-align: center">
+                    <div class="col-xl-12 align-items-center">
+                        <img src="/engo351/2022F/t1/static/DataModel.svg" alt="Model1" class="results-images">
+                    </div>
+                </div>
+                <div class ='row textbar align-items-center ' style="text-align: center">
+                    <div class="col-xl-12 align-items-center">
+                        <img src="/engo351/2022F/t1/static/ResultsModel.svg" alt="Model2" class="results-images">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

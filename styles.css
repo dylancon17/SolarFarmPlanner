@@ -1,0 +1,80 @@
+.label-text {
+    width: 100%;
+    text-align: center;
+}
+
+body {
+    background-color: #ffffff ;
+}
+
+.h5 {
+    color: #ffffff;
+}
+
+.header {
+    padding-top: 25px;
+    background-color: #ffffff ;
+
+}
+
+.main {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+}
+
+.sidebar{
+    background-color: #2482a7;
+    text-align: center;
+    color:white;
+}
+
+.textbar{
+    background-color: #8bb7cc ;
+    color:black;
+}
+
+.alberta-ecozones{
+    width: 100%;
+    max-width: 792px;
+}
+
+.solar-farm{
+    width: 100%;
+    max-width: 500px;
+}
+
+.borders{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.noline{
+    border: 0;
+}
+
+.tableline{
+    border: solid black 2px;
+    border-top: 0;
+}
+
+.small-col{
+    float:left;
+    width:10%;
+}
+
+.large-col{
+    float:left;
+    width:40%;
+}
+
+.data-images{
+    width: 100%;
+    max-width: 500px;
+}
+
+.results-images{
+    width: 100%;
+}

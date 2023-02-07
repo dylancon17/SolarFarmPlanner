@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>
+        Solar Farm Location Planner
+    </title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+
+<body>
+
+    <section>
+        <div class="header"> 
+        <!-- Should be standard across all pages -->
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-3">
+                        <h1>Solar Farm Location Planner</h1>
+                    </div>
+                    <div class="col-xl-3"></div>
+
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/">The Problem</a>
+                    </div>
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/data-sources.html">Data</a>
+                    </div>
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/maps.html">Our Analysis</a>
+                    </div>
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/results.html">Our Results</a>
+                    </div>                    
+                    <div class="col-xl label-text align-items-center">
+                        <a style="color:#52ab98;font-size:18px;" href="/engo351/2022F/t1/progress.html">Our Progress</a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-top: 4px solid rgba(0,0,0,0.3);margin-bottom: 0rem;">
+        </div>
+    </section>
+
+    <section>
+        <div class="main textbar">
+            <div class="container-fluid align-items-center label-text">
+                <div class ='row'>
+                    <div class="col-xl-12">
+                        <div class="borders">
+                            <h3>Our Data</h3>
+                            <p>For this project, we required data from a variety of sources in order to identify ideal locations to install solar panels in South East Alberta. The below table contains the data we use in this project.</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class ='row'>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-10">
+                        <div class="table-responsive textbar">
+                            <table class="table table-striped">
+                                <thead>
+                                    <th scope="col">Data</th>
+                                    <th scope="col">Sourced From</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Reason for Using</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <!-- Solar Radiation -->
+                                        <td><a href="/engo351/2022F/t1/data/Solar_Radiation.lyrx" style="color:#000000">Annual Solar Radiation</a></td>
+                                        <td><a href="https://open.alberta.ca/opendata/gda-dde6ad60-dd08-4f21-bbda-7934c8cbdf1f" style="color:#000000">Alberta Government Open Data</a></td>
+                                        <td>A layer file that indicates the average annual solar radiation in Alberta from 1971-2000 based on lattitude and other factors like cloud coverage</td>
+                                        <td>It is essential to build a solar panel farm in an area that maximizes the collected energy from the sun</td>
+                                    </tr>
+                                    <tr>
+
+                                        <!-- Topographic -->
+                                        <td><a href="/engo351/2022F/t1/data/Contour_Elevation.lyrx" style="color:#000000">Countour Elevation</a></td>
+                                        <td><a href="https://open.alberta.ca/opendata/gda-c16469a2-5541-455c-bba0-63a24c0ff08a" style="color:#000000">Alberta Government Open Data</a></td>
+                                        <td>A layer file with 50m contour intervals of topographic elevation data in Alberta</td>
+                                        <td>Solar panels are the most effective when facing directly South. This data will be used to removee areas that are North sloped and prioritize South facing slopes</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- Forests -->
+                                        <td><a href="/engo351/2022F/t1/data/Forest_Generalized.lyrx" style="color:#000000">Forested Areas</a></td>
+                                        <td><a href="https://open.alberta.ca/opendata/gda-0d26a053-7307-44a4-af20-8971a5bad04e" style="color:#000000">Alberta Government Open Data</a></td>
+                                        <td>A layer file that indicates which areas in Alberta have tree coverage</td>
+                                        <td>Solar panels take up a lot of space, something to be mindful of when doing that is minimizing the amount of deforestation during construction</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- Wildlife Conservation -->
+                                        <td><a href="/engo351/2022F/t1/data/Wildlife_Conservation.lyrx" style="color:#000000">Wildlife Habitat Sensitivity</a></td>
+                                        <td><a href="https://open.alberta.ca/opendata/gda-700d8149-81f2-41bb-90a8-3bd947c9b563" style="color:#000000">Alberta Government Open Data</a></td>
+                                        <td>A layer file that assigns a value on a scale to individual points in Alberta based on how likely it is that an animal species at risk inhabits the area or if it is a legally protected area</td>
+                                        <td>Solar panels take up a lot of space, something to be mindful of is to minimize the impact the farm would have on wildlife in Alberta</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- Power lines -->
+                                        <td><a href="/engo351/2022F/t1/data/Transmission_Lines.lyrx" style="color:#000000">Power Line Locations</a></td>
+                                        <td><a href="https://www.aeso.ca/grid/connecting-to-the-grid/transmission-capability-map/" style="color:#000000">AESO (Alberta Electric System Operator)</a></td>
+                                        <td>A layer file that shows the major power lines in Southern and Eastern Alberta</td>
+                                        <td>To construct a solar panel farm, it will be more realistic if high power infrastructure already exists in the surrounding area to minimize startup costs, this includes having nearby powerlines</td>
+                                    </tr>
+                                    <tr>
+                                        <!-- Generation Capacity -->
+                                        <td><a href="/engo351/2022F/t1/data/Substations_Capability.lyrx" style="color:#000000">Energy Transmission Capability</a></td>
+                                        <td><a href="https://www.aeso.ca/grid/connecting-to-the-grid/transmission-capability-map/" style="color:#000000">AESO (Alberta Electric System Operator)</a></td>
+                                        <td>A layer file that shows the amount of energy generation capcity that could be added at different substations in Southern and Eastern Alberta</td>
+                                        <td>To construct a solar panel farm, it will be more realistic if high power infrastructure already exists in the surrounding area to minimize startup costs, this includes having energy infrastructure that can handle the increased load</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    
+                </div>
+                <div style="height:100px"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
